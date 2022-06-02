@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="4.317">
+    <testcase classname="Manter Video" name="Inserir video com sucesso" time="3.498">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Video........................passed
+Quando a requisicao de insercao video eh enviada............................passed
+Entao deve retornar http status code 201....................................passed
+E response deve conter o id do video criado.................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Inserir mesmo video" time="0.097">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Video........................passed
+Quando a requisicao de insercao video eh enviada............................passed
+Entao deve retornar http status code 409....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Apagar video com sucesso" time="0.153">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+Quando a requisicao de remover video eh enviada.............................passed
+Entao deve retornar http status code 204....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Realizar Login" name="Login com credenciais inválidas" time="0.047">
+        <system-out>
+            <![CDATA[Dado as credenciais inválidas...............................................passed
+Quando requisicao de login enviada..........................................passed
+Entao deve retornar http status code 401....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Realizar Login" name="Login com credenciais" time="0.045">
+        <system-out>
+            <![CDATA[Dado as credenciais.........................................................passed
+Quando requisicao de login enviada..........................................passed
+Entao deve retornar http status code 401....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Realizar Login" name="Login com sucesso" time="0.047">
+        <system-out>
+            <![CDATA[Dado as credenciais.........................................................passed
+Quando requisicao de login enviada..........................................passed
+Entao deve retornar http status code 201....................................passed
+E deve conter token no response.............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
