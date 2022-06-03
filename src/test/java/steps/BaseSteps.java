@@ -23,5 +23,6 @@ public class BaseSteps {
     protected static String token = null;
     protected static ValidatableResponse response;
     protected static String idVideo;
+    protected static Long idComentario;
 
 }

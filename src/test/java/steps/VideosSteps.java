@@ -34,6 +34,20 @@ public class VideosSteps extends BaseSteps {
                 .then();
     }
 
+    @Quando("a requisicao de consulta de video com id eh enviada")
+    public void aRequisicaoDeConsultaDeVideoComIdEhEnviada() {
+        response = given()
+                .get("/videos/{idVideo}", idVideo)
+                .then();
+    }
+
+    @Quando("a requisicao de consulta de videos eh enviada")
+    public void aRequisicaoDeConsultaDeVideosEhEnviada() {
+        response = given()
+                .get("/videos")
+                .then();
+    }
+
     @Quando("a requisicao de remover video eh enviada")
     public void aRequisicaoDeRemoverVideoEhEnviada() {
         response = given()

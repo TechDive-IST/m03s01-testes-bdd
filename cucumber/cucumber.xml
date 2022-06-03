@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="4.317">
-    <testcase classname="Manter Video" name="Inserir video com sucesso" time="3.498">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="4.884">
+    <testcase classname="Manter Comentario" name="Inserir video com sucesso" time="3.269">
         <system-out>
             <![CDATA[Dado que foi realizado login................................................passed
 E que requisicao contem dados para insercao de Video........................passed
@@ -10,7 +10,61 @@ E response deve conter o id do video criado.................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Manter Video" name="Inserir mesmo video" time="0.097">
+    <testcase classname="Manter Comentario" name="Inserir comentario faltando dados" time="0.108">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Comentario...................passed
+Quando a requisicao de insercao comentario eh enviada.......................passed
+Entao deve retornar http status code 400....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Comentario" name="Inserir comentario com sucesso" time="0.131">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Comentario...................passed
+Quando a requisicao de insercao comentario eh enviada.......................passed
+Entao deve retornar http status code 201....................................passed
+E response deve conter o id do comentario criado............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Comentario" name="Apagar comentario com sucesso" time="0.106">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+Quando a requisicao de remover comentario eh enviada........................passed
+Entao deve retornar http status code 204....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Comentario" name="Apagar video com sucesso" time="0.066">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+Quando a requisicao de remover video eh enviada.............................passed
+Entao deve retornar http status code 204....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Inserir video faltando dados" time="0.099">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Video........................passed
+Quando a requisicao de insercao video eh enviada............................passed
+Entao deve retornar http status code 400....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Inserir video com sucesso" time="0.143">
+        <system-out>
+            <![CDATA[Dado que foi realizado login................................................passed
+E que requisicao contem dados para insercao de Video........................passed
+Quando a requisicao de insercao video eh enviada............................passed
+Entao deve retornar http status code 201....................................passed
+E response deve conter o id do video criado.................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Inserir mesmo video" time="0.113">
         <system-out>
             <![CDATA[Dado que foi realizado login................................................passed
 E que requisicao contem dados para insercao de Video........................passed
@@ -19,7 +73,23 @@ Entao deve retornar http status code 409....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Manter Video" name="Apagar video com sucesso" time="0.153">
+    <testcase classname="Manter Video" name="Consultar video Por Id" time="0.124">
+        <system-out>
+            <![CDATA[Quando a requisicao de consulta de video com id eh enviada..................passed
+Entao deve retornar http status code 200....................................passed
+E response deve conter o id do video criado.................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Consultar videos" time="0.047">
+        <system-out>
+            <![CDATA[Quando a requisicao de consulta de videos eh enviada........................passed
+Entao deve retornar http status code 200....................................passed
+E response deve conter lista de objetos.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manter Video" name="Apagar video com sucesso" time="0.069">
         <system-out>
             <![CDATA[Dado que foi realizado login................................................passed
 Quando a requisicao de remover video eh enviada.............................passed
@@ -27,7 +97,7 @@ Entao deve retornar http status code 204....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Realizar Login" name="Login com credenciais inválidas" time="0.047">
+    <testcase classname="Realizar Login" name="Login com credenciais inválidas" time="0.03">
         <system-out>
             <![CDATA[Dado as credenciais inválidas...............................................passed
 Quando requisicao de login enviada..........................................passed
@@ -35,7 +105,7 @@ Entao deve retornar http status code 401....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Realizar Login" name="Login com credenciais" time="0.045">
+    <testcase classname="Realizar Login" name="Login com credenciais" time="0.026">
         <system-out>
             <![CDATA[Dado as credenciais.........................................................passed
 Quando requisicao de login enviada..........................................passed
@@ -43,7 +113,7 @@ Entao deve retornar http status code 401....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Realizar Login" name="Login com sucesso" time="0.047">
+    <testcase classname="Realizar Login" name="Login com sucesso" time="0.023">
         <system-out>
             <![CDATA[Dado as credenciais.........................................................passed
 Quando requisicao de login enviada..........................................passed

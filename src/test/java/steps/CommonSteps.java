@@ -6,6 +6,7 @@ import io.cucumber.java.pt.Entao;
 import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class CommonSteps extends BaseSteps {
 
@@ -26,6 +27,11 @@ public class CommonSteps extends BaseSteps {
     @Entao("deve retornar http status code {int}")
     public void deveRetornarHttpStatusCode(Integer status) {
         response.statusCode(status);
+    }
+
+    @Entao("response deve conter lista de objetos")
+    public void responseDeveConterListaDeObjetos() {
+        response.body("$", not(emptyArray()));
     }
 
 }
